@@ -12,12 +12,19 @@ This repository contains the dataset, code, and trained models associated with o
 
 ## 💻 Code
 
-- **File**: `code/ML_GQDs_Training.ipynb`
-- **Framework**: [Chemprop v2](https://github.com/chemprop/chemprop) (D-MPNN)
-- **Environment**: Google Colab (Python, PyTorch, RDKit)
-- **Tasks**: SMILES conversion, data loading, 5-fold cross-validation, property prediction
+All code is implemented in **Google Colab** using **Chemprop** (D-MPNN).
 
-> 🔗 To run: Open the notebook in Google Colab and follow the cells from top to bottom.
+### 1. Standard Training (`code/ML_GQDs_Training.ipynb`)
+- Splits data into fixed train (80%), validation (10%), and test (10%) sets.
+- Trains a Chemprop model for 300 epochs.
+- Evaluates performance on the held-out test set (R² ≈ 0.95 for HOMO, 0.90 for LUMO).
+
+### 2. K-Fold Cross-Validation (`code/ML_GQDs_CV.ipynb`)
+- Performs **5-fold stratified cross-validation** for robust performance estimation.
+- Each fold uses 90% for training/validation and 10% for testing.
+- Reports mean and per-fold metrics, highlighting sensitivity of HOMO/LUMO to chemical diversity.
+- Demonstrates that while HOMO prediction is robust, LUMO is more sensitive to rare functional groups (e.g., –B, –NO₂).
+
 
 ## 📈 Key Results
 
