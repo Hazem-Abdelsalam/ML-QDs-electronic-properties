@@ -9,7 +9,7 @@ This repository contains the dataset, code, and trained models associated with o
 - **Properties**: DFT-computed `E_HOMO` and `E_LUMO` (in eV)
 - **Functional groups**: COOH, COH, NO₂, CN, SO₂H, POH, and dopants (B, N, S, O)
 - **Computational method**: B3LYP/6-31G in Gaussian 16
-- **Structure Files**: The original atomic structures for all 254 quantum dots are provided as a compressed archive: `GQD_SiCQD_Structures.rar`
+- **Structure Files**: The original atomic structures for all 254 quantum dots are provided as a compressed archive: `GQD_SiCQD_Structures.zip`
 This  file contains PDB format files for each quantum dot system studied.
 
 ## 💻 Code
